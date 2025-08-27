@@ -1,3 +1,8 @@
 .roboto {
     font-family: "Roboto", sans-serif;
 }
+
+
+background-image: linear-gradient(
+  to right,#013223 0%,  #013223 20%, #006747 20%,  #006747 80%, #013223 80%,#013223 100%
+);
