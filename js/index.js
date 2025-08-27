@@ -19,14 +19,14 @@ document.getElementById("phone-section").addEventListener("click", function (eve
         }
         const serviceName = event.target.parentNode.parentNode.querySelector(".service-name").innerText;
         const serviceNumber = event.target.parentNode.parentNode.querySelector(".service-number").innerText;
-        const serviceNumberHeading=event.target.parentNode.parentNode.querySelector(".service-heading").innerText;
-        
+        const serviceNumberHeading = event.target.parentNode.parentNode.querySelector(".service-heading").innerText;
+
         const newCoinNumber = coinNumber - 20;
         document.getElementById("coin-count").innerText = newCoinNumber;
         alert(`📞Calling ${serviceName} ${serviceNumber}...`);
 
-        const historyContainer=document.getElementById("history-container")
-        const currentTime=new Date()
+        const historyContainer = document.getElementById("history-container")
+        const currentTime = new Date()
         const newDiv = document.createElement("div")
         newDiv.innerHTML = `
         <div class="flex justify-between items-center p-3 rounded-lg bg-gray-100 text-xs mt-5">
@@ -42,10 +42,18 @@ document.getElementById("phone-section").addEventListener("click", function (eve
 
 
     }
+    else if (event.target.classList.contains("copy-btn")) {
+        const serviceNumber = event.target.parentNode.parentNode.querySelector(".service-number").innerText;
+        navigator.clipboard.writeText(serviceNumber);
+        const copyCount=getValue("copy-count");
+        const newCopyCount=copyCount+1;
+        document.getElementById("copy-count").innerText=newCopyCount;
+
+    }
 })
 
 
-document.getElementById("clear-btn").addEventListener("click",function(){
-    const historyContainer=document.getElementById("history-container")
-    historyContainer.innerHTML="";
+document.getElementById("clear-btn").addEventListener("click", function () {
+    const historyContainer = document.getElementById("history-container")
+    historyContainer.innerHTML = "";
 })
