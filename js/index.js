@@ -44,6 +44,7 @@ document.getElementById("phone-section").addEventListener("click", function (eve
     }
     else if (event.target.classList.contains("copy-btn")) {
         const serviceNumber = event.target.parentNode.parentNode.querySelector(".service-number").innerText;
+        alert(`${serviceNumber} has coppied in the clipboard`);
         navigator.clipboard.writeText(serviceNumber);
         const copyCount=getValue("copy-count");
         const newCopyCount=copyCount+1;
