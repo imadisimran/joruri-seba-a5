@@ -9,16 +9,16 @@ Ans: First I need to select the parent after that I need to create a new tag and
 <br>
 <br>
 
-### What is Event Bubbling and how does it work?
+### 3. What is Event Bubbling and how does it work?
 Ans: Event bubbling is a method how browsers react to an event. When an event happens in an element all the event handelers of it's parent element also triggered.
 <br>
 <br>
 
-### What is Event Delegation in JavaScript? Why is it useful?
+### 4. What is Event Delegation in JavaScript? Why is it useful?
 Ans: Event delegation is a way where event listener is applied to one element instead of multiple elements. It is useful when we need to add event listener to all it's child. Using delegation concept we can minimize the use of event listener by applying event listener to only the parent.
 <br>
 <br>
 
 
-### What is the difference between preventDefault() and stopPropagation() methods?
+### 5. What is the difference between preventDefault() and stopPropagation() methods?
 Ans: preventDefault() is a method to stop reloading when clicking a button inside a from tag. stopPropagation() is a method to stop bubbling in a certain level of DOM.
